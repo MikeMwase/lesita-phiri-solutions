@@ -1,5 +1,5 @@
-import { Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const scrollToSection = (id: string) => {
@@ -13,8 +13,8 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <div className="flex items-center gap-2">
-            <Shield className="w-8 h-8 text-accent" />
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="Lesita-Phiri Logo" className="w-10 h-10" />
             <span className="text-2xl font-bold text-primary">Lesita-Phiri</span>
           </div>
           
