@@ -5,12 +5,17 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/lesita-phiri-solutions/",   // ✔ IMPORTANT for GitHub Pages
+  // ✔ Base path added here for GitHub Pages deployment
+  base: "/lesita-phiri-solutions/", 
+  
   server: {
     host: "::",
     port: 8080,
   },
-  plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
+  plugins: [
+    react(),
+    mode === "development" && componentTagger()
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
